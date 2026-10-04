@@ -1,3 +1,4 @@
+compatibility_flags = ["nodejs_compat"]
 name = "${NAME}"
 main = "src/index.js"
 compatibility_date = "2025-06-04"
