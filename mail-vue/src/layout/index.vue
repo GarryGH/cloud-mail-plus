@@ -19,7 +19,9 @@
     </el-container>
   </el-container>
   <writer ref="writerRef" />
-  <AgentSidePanel :visible="agentStore.panelVisible" @close="agentStore.panelVisible = false" />
+  <AgentSidePanel
+      :visible="agentStore.panelVisible && agentStore.settings.agentEnabled"
+      @close="agentStore.panelVisible = false" />
 </template>
 
 <script setup>

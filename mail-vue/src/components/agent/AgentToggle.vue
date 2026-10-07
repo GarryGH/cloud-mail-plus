@@ -18,9 +18,10 @@ function toggle() {
 
 <template>
   <button
+    v-if="enabled"
     class="agent-toggle icon-item"
-    :class="{ active: store.panelVisible, disabled: !enabled }"
-    :title="enabled ? t('aiAgentChatTitle') : t('aiAgentEnable')"
+    :class="{ active: store.panelVisible }"
+    :title="t('aiAgentChatTitle')"
     @click="toggle"
   >
     <span class="agent-toggle-spark">✨</span>
@@ -60,11 +61,6 @@ function toggle() {
 .agent-toggle.active {
   background: linear-gradient(135deg, #fbbf24, #f59e0b);
   color: white;
-}
-.agent-toggle.disabled {
-  background: #f3f4f6;
-  border-color: #d1d5db;
-  color: #6b7280;
 }
 .agent-toggle-spark { font-size: 16px; }
 </style>
